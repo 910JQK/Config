@@ -1,0 +1,7 @@
+#!/bin/sh
+mount --bind /dev/pts ./dev/pts
+mount --bind /tmp ./tmp
+[ -d ./run/udev ] || mkdir ./run/udev
+mount --bind /run/udev ./run/udev
+[ -d ./run/dbus ] || mkdir ./run/dbus
+mount --bind /run/dbus ./run/dbus

@@ -1,0 +1,78 @@
+#!/bin/bash
+
+H=$(date +%k)
+M=$(date +%M|sed 's/^0//')
+
+NUM(){
+case "$@" in
+0)
+echo -nE '初'
+;;
+1)
+echo -nE '一'
+;;
+2)
+echo -nE '二'
+;;
+3)
+echo -nE '三'
+esac
+}
+
+DJ(){
+case "$@" in
+0)
+echo -nE '子'
+;;
+1)
+echo -nE '丑'
+;;
+2)
+echo -nE '寅'
+;;
+3)
+echo -nE '卯'
+;;
+4)
+echo -nE '辰'
+;;
+5)
+echo -nE '巳'
+;;
+6)
+echo -nE '午'
+;;
+7)
+echo -nE '未'
+;;
+8)
+echo -nE '申'
+;;
+9)
+echo -nE '酉'
+;;
+10)
+echo -nE '戌'
+;;
+11|12)
+echo -nE '亥'
+esac
+}
+
+mod="$(expr $H % 2)"
+
+if [ "$H" = "23" ];then
+h='子時'
+else
+h=$(DJ $(expr $H / 2  + $mod))"時"
+fi
+
+m=$(NUM $(expr $M / 15))
+
+if [ "$mod" = "1" ];then
+m="初${m}刻"
+else
+m="正${m}刻"
+fi
+
+echo "${h}・${m}"

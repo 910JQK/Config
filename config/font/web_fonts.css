@@ -1,0 +1,11 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+:lang(zh-cn) {font-family: 'WebPageCN';}
+
+:lang(zh-tw) {font-family: 'WebPageTW';}
+
+:lang(zh-hk) {font-family: 'WebPageTW';}
+
+:lang(ja) {font-family: 'WebPageJP';}
+
+:lang(ko) {font-family: 'SansKR';}

@@ -1,0 +1,1 @@
+/usr/bin/x11vnc -display :0 -noxdamage -many -forever -ncache 10 -auth ~/.Xauthority -rfbauth ~/.vnc/passwd

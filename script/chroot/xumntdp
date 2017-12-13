@@ -1,0 +1,5 @@
+#!/bin/sh
+umount ./dev/pts
+umount ./tmp
+umount ./run/udev
+umount ./run/dbus
